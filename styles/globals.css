@@ -1,21 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer components {
+  .bg {
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.765),
+        rgba(9, 8, 46, 0.829)
+      ),
+      url("/images/hero.jpg");
+      background-position: center;
+      
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  .footer__link{
+    @apply text-white text-[15px] opacity-70 mb-[1rem] w-fit cursor-pointer hover:text-yellow-500
+  }
 }
